@@ -1,0 +1,235 @@
+/* Root Styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+header, main, footer {
+  text-align: center;
+  width: 100%;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+  padding: 1rem;
+  background-color: #1a1a1a; /* Dark background for the navbar */
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between links */
+}
+
+nav li {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #646cff; /* Default text color */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px; /* Rounded edges for hover and active states */
+}
+
+nav li:hover {
+  color: #ffffff; /* Text color when hovered */
+  background-color: #535bf2; /* Background color on hover */
+}
+
+nav li.active {
+  color: #ffffff; /* Active text color */
+  background-color: #646cff; /* Active background color */
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(100, 108, 255, 0.6); /* Subtle glow effect */
+}
+
+/* Button Styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s, transform 0.1s;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #2c2c2c;
+  transform: scale(1.05); /* Slightly grow the button on hover */
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* About Me Section */
+.about-me {
+  padding: 2rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.about-me img {
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* Portfolio Section */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.portfolio img:hover {
+  transform: scale(1.1);
+}
+
+.portfolio a {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #646cff;
+  text-decoration: none;
+}
+
+.portfolio a:hover {
+  color: #535bf2;
+}
+
+/* Contact Section */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.contact input, .contact textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: 2px solid #646cff;
+}
+
+.contact button {
+  padding: 0.6em 1.2em;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #535bf2;
+}
+
+/* Resume Section */
+.resume {
+  padding: 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.resume a {
+  color: #646cff;
+  text-decoration: none;
+}
+
+.resume a:hover {
+  color: #535bf2;
+}
+
+/* Footer Styles */
+footer {
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 100%;
+}
+
+footer a {
+  color: #646cff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: #535bf2;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr 1fr; /* Stack portfolio images into two columns */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  nav li:hover {
+    color: #747bff;
+  }
+}
